@@ -6,11 +6,11 @@ const player = new Player(iframe);
 
 function initTimeoutDate() {
   const storageData = localStorage.getItem('videoplayer-current-time');
-  console.log(storageData);
+  //   console.log(storageData);
 
   if (storageData) {
     const { seconds } = JSON.parse(storageData);
-    console.log(seconds);
+    console.log('prev timeout: ', seconds);
     player.setCurrentTime(seconds);
   }
 }
@@ -22,12 +22,12 @@ player.on('play', function () {
 });
 
 player.on('pause', function () {
-  console.log('pause');
+  console.log('pause...');
 });
 
 player.on('timeupdate', throttle(onTimeCount, 1000));
 
 function onTimeCount(currentTime) {
-  console.log(currentTime);
+  //   console.log(currentTime);
   localStorage.setItem('videoplayer-current-time', JSON.stringify(currentTime));
 }
