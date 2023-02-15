@@ -38,7 +38,8 @@ function clearFormValues() {
 }
 
 function initStorageData() {
-  storageData = localStorage.getItem('feedback-form-state');
+  const storageData = localStorage.getItem('feedback-form-state');
+  //   console.log(storageData);
   if (storageData) {
     const { email, message } = JSON.parse(storageData);
     refs.mailInput.value = email;
