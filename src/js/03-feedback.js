@@ -22,7 +22,10 @@ function onFormInput(e) {
 
 function OnSubmitBtnClick(e) {
   e.preventDefault();
-
+  if (refs.mailInput.value === '' || refs.textarea.value === '') {
+    alert('Please fill out the form to continue!');
+    return;
+  }
   console.log(formData);
 
   localStorage.clear();
