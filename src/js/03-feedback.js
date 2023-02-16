@@ -10,9 +10,8 @@ const refs = {
 // Об'єкт введених в інпутах даних з дефолтними значеннями '',
 // щоб не підтягувався undefined і не передавався пустий об'єкт в консоль
 // після перезавантаження + сабміт
-
 const formData = { email: '', message: '' };
-console.log('formData starting init:', formData);
+// console.log('formData starting init:', formData);
 
 // При завантаженні сторінки витягуємо з Local Storage дані
 // в поля інпутів, якщо такі дані вже існують (умова з ТЗ)
